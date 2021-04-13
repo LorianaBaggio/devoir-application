@@ -1,0 +1,7 @@
+{
+  "name": "devoir-application",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
