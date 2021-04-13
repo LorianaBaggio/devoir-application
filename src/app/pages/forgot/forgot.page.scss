@@ -1,0 +1,48 @@
+* {
+  text-transform: initial;
+}
+
+.back-icon {
+  margin-top: 10%;
+  margin-left: 5%;
+  a {
+    color: #555 !important;
+  }
+}
+
+.logo {
+  margin: auto;
+  width: 40%;
+  margin-top: 10%;
+}
+
+p,
+h2 {
+  text-align: center;
+  color : #555;
+}
+
+.form {
+  ion-label {
+    color: #999;
+  }
+}
+
+.homeBtn {
+  .btnLogin {
+    --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --box-shadow:none;
+  }
+  .btnRegister {
+    --background: white;
+    --background-hover: white;
+    --background-focused: white;
+    --background-activated: white;
+    --box-shadow:none;
+    color: #009eff;
+    border: solid 2px #0057ff;
+  }
+}

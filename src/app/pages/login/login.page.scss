@@ -1,0 +1,43 @@
+* {
+  text-transform: initial;
+}
+
+.logo {
+  margin: auto;
+  width: 40%;
+  margin-top: 10%;
+}
+
+.form {
+  .btnLogin {
+      --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+      --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+      --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+      --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+  }
+  .btnFb {
+    --box-shadow:none;
+    --background: #3B5998;
+  }
+  .forgot {
+    font-size: 0.75em;
+    text-align: center;
+  }  
+  ion-label {
+    color: #999;
+  }
+}
+
+p {
+  color: #555 !important;
+}
+
+a {
+  color: #00b0ff;
+}
+
+.registerLink {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 0.75em;
+}

@@ -1,9 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+  <ion-row class="logo">
+      <ion-col size="12" class="ion-align-self-center">
+        <img src="assets/img/logo-appli.svg" alt="">
+      </ion-col>
+  </ion-row>
+  <ion-row class="form">
+      <ion-col size="12">
+          <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Mot de passe</ion-label>
+              <ion-input type="password" [(ngModel)]="pass"></ion-input>
+          </ion-item>
+      </ion-col>
+      <ion-col size="12">
+          <p class="forgot"><a routerLink="/forgot"> Mot de passe oublié ?</a></p>
+      </ion-col>
+      <ion-col size="12">
+          <ion-button expand="full" class="btnLogin">Se connecter</ion-button>
+      </ion-col>
+      <ion-col size="12">
+          <ion-button expand="full" class="btnFb">
+            <ion-icon name="logo-facebook"></ion-icon> 
+              &nbsp;Se connecter avec Facebook
+          </ion-button>
+      </ion-col>
+  </ion-row>
+  <p class="registerLink">Pas encore de compte ? <a routerLink="/register">Inscris-toi !</a></p>
 </ion-content>

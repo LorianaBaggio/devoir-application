@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+  <ion-row class="logo">
+      <ion-col size="12" class="ion-align-self-center">
+        <img src="assets/img/logo-appli.svg" alt="">
+      </ion-col>
+  </ion-row>
+  <ion-row class="form">
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Nom et prénom</ion-label>
+          <ion-input type="text" [(ngModel)]="text"></ion-input>
+      </ion-item>
+          <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Mot de passe</ion-label>
+              <ion-input type="password" [(ngModel)]="pass"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmer le mot de passe</ion-label>
+            <ion-input type="password" [(ngModel)]="pass"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+          <ion-button expand="full" class="btnLogin">S'inscrire</ion-button>
+      </ion-col>
+      <ion-col size="12">
+          <ion-button expand="full" class="btnFb">
+            <ion-icon name="logo-facebook"></ion-icon>
+            &nbsp;S'inscrire avec Facebook
+          </ion-button>
+      </ion-col>
+  </ion-row>
+  <p class="registerLink">Tu as déjà un compte ? <a routerLink="/login">Connecte-toi !</a></p>
 </ion-content>

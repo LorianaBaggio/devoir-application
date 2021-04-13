@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'video-play',
     loadChildren: () => import('./pages/video-play/video-play.module').then( m => m.VideoPlayPageModule)
   },
+  {
+    path: 'forgot',
+    loadChildren: () => import('./pages/forgot/forgot.module').then( m => m.ForgotPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,27 +1,34 @@
-#container {
+* {
+  text-transform: initial;
+}
+
+.logo {
+  margin: auto;
+  width: 40%;
+  margin-top: 20%;
+}
+
+p,
+h1 {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  color : #555;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.homeBtn {
+  .btnLogin {
+    --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    --box-shadow:none;
+  }
+  .btnRegister {
+    --background: white;
+    --background-hover: white;
+    --background-focused: white;
+    --background-activated: white;
+    --box-shadow:none;
+    color: #009eff;
+    border: solid 2px #0057ff;
+  }
 }
