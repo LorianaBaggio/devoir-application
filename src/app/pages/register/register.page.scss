@@ -8,25 +8,29 @@
   margin-top: 10%;
 }
 
-.form {
-  .btnLogin {
-    margin-top: 5%;
+.registerForm {
+  .btnRegister {
+    margin-top: 2%;
       --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --box-shadow:none;
   }
-  .btnFb {
+  .btnRegisterFb {
     --box-shadow:none;
     --background: #3B5998;
+    --background-hover: #3B5998;
+    --background-focused: #3B5998;
+    --background-activated: #3B5998;
   }
   .forgot {
       margin-top: 0;
       text-align: center;
   }
-  ion-label {
+  ion-label, ion-item {
     color: #999;
+    margin: 0 !important;
   }
 }
 
@@ -40,6 +44,6 @@ a {
 }
 
 .registerLink {
-  margin-top: 5%;
+  margin-top: 2%;
   font-size: 0.75em;
 }
