@@ -15,7 +15,7 @@ export class RegisterPage implements OnInit {
 
   isErrorMail: boolean = true;
   isErrorPhone: boolean = true;
-  user: UserRegister = {first_name: '', last_name: '', email: '', password: '', username: '' };
+  user: UserRegister = {first_name: '', last_name: '', email: '', password: '', username: '', confirm_password: '' };
 
   constructor( 
     private router: Router,
