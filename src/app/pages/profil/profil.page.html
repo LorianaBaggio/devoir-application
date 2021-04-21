@@ -20,10 +20,10 @@
 
   <ion-row class="userInformations">
     <ion-col size="12" class="userName">
-      <p>Nom et prénom de l'utilisateur</p>  
+      <p>{{first_name}} {{last_name}}</p>  
     </ion-col>
     <ion-col size="12" class="userEmail">
-      <p>Email de l'utilisateur</p>
+      <p>{{email}}</p>
     </ion-col>
       <ion-col size="12" class="userPassword">
       <p>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</p>
@@ -31,6 +31,6 @@
   </ion-row>
 
   <ion-col size="12">
-    <p class="logout"><a routerLink="">Se déconnecter</a></p>
+    <p class="logout"><a routerLink="/home">Se déconnecter</a></p>
   </ion-col>
 </ion-content>
