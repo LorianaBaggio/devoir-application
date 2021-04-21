@@ -28,7 +28,7 @@ h2 {
   }
 }
 
-.homeBtn {
+.form {
   .btnLogin {
     --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
     --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
@@ -36,13 +36,14 @@ h2 {
     --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
     --box-shadow:none;
   }
-  .btnRegister {
-    --background: white;
-    --background-hover: white;
-    --background-focused: white;
-    --background-activated: white;
-    --box-shadow:none;
-    color: #009eff;
-    border: solid 2px #0057ff;
+  .errorEmail {
+    border-bottom: #ff0062;
+    --border-color: #ff0062;
+    --highlight-background: #ff0062;
+  }
+  .goodEmail {
+      border-bottom: #12eb48;
+      --border-color: #12eb48;
+      --highlight-background: #12eb48;
   }
 }
