@@ -1,4 +1,4 @@
-<ion-content class="scroller">
+<ion-content>
 
   <ion-row class="avatar">
     <ion-col size="12" class="ion-align-self-center">
@@ -6,38 +6,30 @@
       <ion-icon name="add-outline"></ion-icon>
     </ion-col>
   </ion-row>
-  <ion-row class="registerForm">
+  <ion-row class="form">
       <ion-col size="12">
         <ion-item>
-          <ion-label position="floating">Prénom</ion-label>
+          <ion-label position="floating">Nom et prénom</ion-label>
           <ion-input type="text" [(ngModel)]="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Nom</ion-label>
-          <ion-input type="text" [(ngModel)]="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Pseudo</ion-label>
-          <ion-input type="text" [(ngModel)]="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="floating">Mot de passe</ion-label>
+      </ion-item>
+          <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Mot de passe</ion-label>
+              <ion-input type="password" [(ngModel)]="pass"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmer le mot de passe</ion-label>
             <ion-input type="password" [(ngModel)]="pass"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">Confirmer le mot de passe</ion-label>
-          <ion-input type="password" [(ngModel)]="pass"></ion-input>
-        </ion-item>
       </ion-col>
       <ion-col size="12">
-          <ion-button expand="full" class="btnRegister">S'inscrire</ion-button>
+          <ion-button expand="full" class="btnLogin">S'inscrire</ion-button>
       </ion-col>
       <ion-col size="12">
-          <ion-button expand="full" class="btnRegisterFb">
+          <ion-button expand="full" class="btnFb">
             <ion-icon name="logo-facebook"></ion-icon>
             &nbsp;S'inscrire avec Facebook
           </ion-button>
