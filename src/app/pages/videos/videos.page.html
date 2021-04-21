@@ -1,9 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>videos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-row class="videosLink">
+    <ion-col size="12">
+      <iframe width="250" height="150" src="https://www.youtube.com/embed/aBE0St5yI7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-col>
+  </ion-row>
 
-</ion-content>
+  <ion-row class="videosInformation">
+    <p class="videosTitle">Formation AngularJS : Introduction</p>
+    <p class="videosDescription">AngularJS est un framework javascript qui permet de créer des application web dynamiques. Ce type d'applications (souvent appellées SPA pour Single Page Application) sont de plus en plus présentes avec des périphériques connectés de plus en plus variés.  
+      <br>
+      Malheureusement, créer une application tenant sur une seule page n'est pas chose simple. En effet, cela requiert l'utilisation de beaucoup de javascript et il est très difficile de bien s'organiser et d'obtenir une application maintenable et modulable. Et c'est ici qu'AngularJS intervient.</p>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-button expand="full" routerLink="../video-play" class="playBouton">Retour aux vidéos</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content> 
