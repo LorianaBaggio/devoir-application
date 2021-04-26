@@ -33,17 +33,18 @@ export class RegisterPage implements OnInit {
 
 async register() {
   const load = await this.loading.create({
-      message: 'Please wait...',
+      message: 'Patientez svp...',
   });
   await load.present();
   // this.user.username = this.user.email.split('@')[0];
   this.auth.register(this.user).then(async(data) => {
+    console.log("success")
       console.log(data);
       await this.loading.dismiss();
       this.router.navigate(['/login']);
   }).catch(async(err) => {
-      console.log("error")
-      console.log(err.HttpErrorResponse.error);
+       console.log("Test erreur");
+       console.log(err.error);
       const toast = await this.toast.create({
           message: err,
           duration: 2000

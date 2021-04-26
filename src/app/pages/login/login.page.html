@@ -9,7 +9,7 @@
       <ion-col size="12">
           <ion-item>
               <ion-label position="floating">Email</ion-label>
-              <ion-input type="email" [(ngModel)]="email"></ion-input>
+              <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="email"></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="floating">Mot de passe</ion-label>
@@ -20,7 +20,7 @@
           <p class="forgot"><a routerLink="/forgot"> Mot de passe oublié ?</a></p>
       </ion-col>
       <ion-col size="12">
-          <ion-button expand="full" class="btnLogin">Se connecter</ion-button>
+          <ion-button expand="full" class="btnLogin" (click)="loginForm()">Se connecter</ion-button>
       </ion-col>
       <ion-col size="12">
           <ion-button expand="full" class="btnFb">

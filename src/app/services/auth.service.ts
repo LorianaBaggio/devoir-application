@@ -20,10 +20,11 @@ export class AuthService {
  async login(email: string, password: string) {
       return new Promise((resolve, rejects) => {
           this.http.post(this.url + '/users/login', { email: email, password: password }).subscribe((data: any) => {
-              console.log(data);     
+              console.log(data);
+                
                   localStorage.setItem('token', data.token);
                   
-              (!data.success) ? rejects(false): resolve(data);
+              (!data.success) ? rejects(data): resolve(data);
               
           });
       });
@@ -32,7 +33,8 @@ export class AuthService {
   register(user: UserRegister) {
       return new Promise((resolve, rejects) => {
           this.http.post(this.url + '/users/register', user).subscribe((data: any) => {
-              (!data.success) ? rejects(data.message): resolve(data);
+            console.log(data);
+              (!data.success) ? rejects(data): resolve(data);
               
           });
       });
