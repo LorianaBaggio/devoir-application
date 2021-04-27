@@ -2,25 +2,10 @@
   text-transform: initial;
 }
 
-.avatar {
-  margin-top: 20%;
-  margin-bottom: 20%;
-  ion-col {
-    text-align: center;
-    input {
-        padding: 15% 18%;
-        border-radius: 50%;
-    }
-    ion-icon {
-        color: white;
-        margin-top: 30%;
-        margin-left: -25%;
-        position: absolute;
-        border-radius: 50%;
-        font-size: xxx-large;
-        background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
-    }
-  }
+.logo {
+  margin: auto;
+  width: 40%;
+  margin-top: 10%;
 }
 
 .form {
