@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.page.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideosPage implements OnInit {
 
-  constructor() { }
+  constructor(private youtubeVideoPlayer: YoutubeVideoPlayer) {}
 
   ngOnInit() {
   }
+
+  invokeVideoPlayer(){
+    this.youtubeVideoPlayer.openVideo('pass-video-id');
+  }  
 
 }
