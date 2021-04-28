@@ -45,7 +45,7 @@ export class LoginPage implements OnInit {
       message: message,
       color: status,
       position: 'top',
-      duration: 2000
+      duration: 3000
     });
     toast.present();
   }
