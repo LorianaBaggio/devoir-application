@@ -17,7 +17,7 @@ export class RegisterPage implements OnInit {
 
   isErrorMail: boolean = true;
   isErrorPhone: boolean = true;
-  user: UserRegister = {first_name: '', last_name: '', email: '', password: '', username: ''};
+  user: UserRegister = {first_name: '', last_name: '', email: '', password: '', username: '', phone: '', confirm_password: ''};
 
   constructor( 
     private afs: AngularFirestore,
@@ -49,6 +49,7 @@ export class RegisterPage implements OnInit {
           'last_name': this.user.last_name,
           'first_name': this.user.first_name,
           'email': this.user.email,
+          'phone': this.user.phone,
           'createdAt': Date.now()
         }).then(() => {
           loading.dismiss();
@@ -83,6 +84,11 @@ export class RegisterPage implements OnInit {
   checkEmail() {
     const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
     this.isErrorMail = (regex.test(this.user.email.trim())) ? false : true;
+}
+
+checkPhone() {
+  const regex = new RegExp(/^((\+)33|0|0033)[1-9](\d{2}){4}$/g);
+  this.isErrorPhone = (regex.test(this.user.phone.trim())) ? false : true;
 }
 
 // async register() {
