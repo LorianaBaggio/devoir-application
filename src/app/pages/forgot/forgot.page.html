@@ -29,7 +29,7 @@
   
   <ion-row class="homeBtn">
       <ion-col size="12">
-          <ion-button expand="full" routerLink="/login" class="btnLogin">Confirmer</ion-button>
+          <ion-button [disabled]="isErrorMail" expand="full" (click)="resetPassword()" class="btnLogin">Confirmer</ion-button>
       </ion-col>
   </ion-row>
 </ion-content>

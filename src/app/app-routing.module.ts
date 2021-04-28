@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -21,19 +22,23 @@ const routes: Routes = [
   },
   {
     path: 'categories',
-    loadChildren: () => import('./pages/categories/categories.module').then( m => m.CategoriesPageModule)
+    loadChildren: () => import('./pages/categories/categories.module').then( m => m.CategoriesPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'profil',
-    loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
+    loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'videos',
-    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
+    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'video-play',
-    loadChildren: () => import('./pages/video-play/video-play.module').then( m => m.VideoPlayPageModule)
+    loadChildren: () => import('./pages/video-play/video-play.module').then( m => m.VideoPlayPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'forgot',
