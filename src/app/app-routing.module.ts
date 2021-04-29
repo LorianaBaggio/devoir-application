@@ -167,6 +167,42 @@ const routes: Routes = [
     path: 'css-box-sizing',
     loadChildren: () => import('./pages/css-box-sizing/css-box-sizing.module').then( m => m.CssBoxSizingPageModule)
   },
+  {
+    path: 'sass-imbrication',
+    loadChildren: () => import('./pages/sass-imbrication/sass-imbrication.module').then( m => m.SassImbricationPageModule)
+  },
+  {
+    path: 'sass-heritage',
+    loadChildren: () => import('./pages/sass-heritage/sass-heritage.module').then( m => m.SassHeritagePageModule)
+  },
+  {
+    path: 'sass-variables',
+    loadChildren: () => import('./pages/sass-variables/sass-variables.module').then( m => m.SassVariablesPageModule)
+  },
+  {
+    path: 'sass-mixins',
+    loadChildren: () => import('./pages/sass-mixins/sass-mixins.module').then( m => m.SassMixinsPageModule)
+  },
+  {
+    path: 'sass-conditions',
+    loadChildren: () => import('./pages/sass-conditions/sass-conditions.module').then( m => m.SassConditionsPageModule)
+  },
+  {
+    path: 'sass-boucles',
+    loadChildren: () => import('./pages/sass-boucles/sass-boucles.module').then( m => m.SassBouclesPageModule)
+  },
+  {
+    path: 'sass-syntaxe',
+    loadChildren: () => import('./pages/sass-syntaxe/sass-syntaxe.module').then( m => m.SassSyntaxePageModule)
+  },
+  {
+    path: 'sass-commande',
+    loadChildren: () => import('./pages/sass-commande/sass-commande.module').then( m => m.SassCommandePageModule)
+  },
+  {
+    path: 'sass-bootstrap',
+    loadChildren: () => import('./pages/sass-bootstrap/sass-bootstrap.module').then( m => m.SassBootstrapPageModule)
+  },
 ];
 
 @NgModule({
