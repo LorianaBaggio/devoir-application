@@ -1,0 +1,52 @@
+* {
+  text-transform: initial;
+}
+
+.back-icon {
+  margin-top: 10%;
+  margin-left: 5%;
+  a {
+    color: #555 !important;
+  }
+}
+
+.avatar {
+  ion-col {
+    text-align: center;
+    input {
+        padding: 15% 18%;
+        border-radius: 50%;
+        background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+    }
+    ion-icon {
+        color: white;
+        margin-top: 10%;
+        margin-left: -26%;
+        position: absolute;
+        border-radius: 50%;
+        font-size: xxx-large;
+    }
+  }
+}
+
+p,
+h2 {
+  color : #555;
+}
+
+h2 {
+  text-align: center;
+}
+
+.logout {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+a {
+  color: #00b0ff;
+}
+
+.userName, .userEmail, .userPassword {
+  border-bottom: solid 1px #999;
+}

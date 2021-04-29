@@ -49,4 +49,5 @@ export const firebaseConfig = {
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AuthGuard, AuthService, NativeStorage],
     bootstrap: [AppComponent],
 })
+
 export class AppModule {}

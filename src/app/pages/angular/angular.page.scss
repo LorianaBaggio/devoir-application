@@ -1,0 +1,54 @@
+* {
+  text-transform: initial;
+  overflow-x: hidden !important;
+}
+
+.back-icon {
+  margin-top: 10%;
+  margin-left: 5%;
+  a {
+    color: #555 !important;
+  }
+}
+
+.profil-icon {
+  margin-top: -7%;
+  margin-right: 5%;
+  float: right;
+  a {
+    color: #555 !important;
+  }
+}
+.categoriesTitle {
+  margin-top: 10%;
+}
+
+p,
+h2 {
+  text-align: center;
+  color : #555;
+}
+
+.videosImg {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.videosTitle,
+.videosDescription {
+  margin-left: 2%;
+}
+
+.videosDescription {
+  text-align: left;
+  font-size: .75em;
+}
+
+.playBouton {
+  --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+  --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+  --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+  --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
+  --box-shadow:none;
+  margin-bottom: 5%;
+} 
