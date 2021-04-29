@@ -275,6 +275,10 @@ const routes: Routes = [
     path: 'wordpress-plugins',
     loadChildren: () => import('./pages/wordpress-plugins/wordpress-plugins.module').then( m => m.WordpressPluginsPageModule)
   },
+  {
+    path: 'profil-edit',
+    loadChildren: () => import('./pages/profil-edit/profil-edit.module').then( m => m.ProfilEditPageModule)
+  },
 ];
 
 @NgModule({
