@@ -239,6 +239,42 @@ const routes: Routes = [
     path: 'angular-apply-watch-digest',
     loadChildren: () => import('./pages/angular-apply-watch-digest/angular-apply-watch-digest.module').then( m => m.AngularApplyWatchDigestPageModule)
   },
+  {
+    path: 'wordpress-interface',
+    loadChildren: () => import('./pages/wordpress-interface/wordpress-interface.module').then( m => m.WordpressInterfacePageModule)
+  },
+  {
+    path: 'wordpress-editeur',
+    loadChildren: () => import('./pages/wordpress-editeur/wordpress-editeur.module').then( m => m.WordpressEditeurPageModule)
+  },
+  {
+    path: 'wordpress-menu',
+    loadChildren: () => import('./pages/wordpress-menu/wordpress-menu.module').then( m => m.WordpressMenuPageModule)
+  },
+  {
+    path: 'wordpress-blog',
+    loadChildren: () => import('./pages/wordpress-blog/wordpress-blog.module').then( m => m.WordpressBlogPageModule)
+  },
+  {
+    path: 'wordpress-accueil',
+    loadChildren: () => import('./pages/wordpress-accueil/wordpress-accueil.module').then( m => m.WordpressAccueilPageModule)
+  },
+  {
+    path: 'wordpress-wdigets',
+    loadChildren: () => import('./pages/wordpress-wdigets/wordpress-wdigets.module').then( m => m.WordpressWdigetsPageModule)
+  },
+  {
+    path: 'wordpress-themes',
+    loadChildren: () => import('./pages/wordpress-themes/wordpress-themes.module').then( m => m.WordpressThemesPageModule)
+  },
+  {
+    path: 'wordpress-medias',
+    loadChildren: () => import('./pages/wordpress-medias/wordpress-medias.module').then( m => m.WordpressMediasPageModule)
+  },
+  {
+    path: 'wordpress-plugins',
+    loadChildren: () => import('./pages/wordpress-plugins/wordpress-plugins.module').then( m => m.WordpressPluginsPageModule)
+  },
 ];
 
 @NgModule({
