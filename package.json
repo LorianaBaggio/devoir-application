@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@capacitor/core": "2.4.7",
+<<<<<<< .merge_file_3AeY4L
 <<<<<<< .merge_file_D19ay2
     "@ionic-native/camera": "^5.32.1",
     "@ionic/angular": "^5.5.2",
@@ -31,11 +32,21 @@
     "@ionic-native/native-storage": "^5.32.0",
     "@ionic-native/toast": "^5.32.0",
     "@ionic/angular": "^5.5.2",
+=======
+    "@ionic-native/core": "^5.32.0",
+    "@ionic-native/http": "^5.32.0",
+    "@ionic-native/native-storage": "^5.32.0",
+    "@ionic-native/toast": "^5.32.0",
+    "@ionic/angular": "^5.5.2",
+>>>>>>> .merge_file_mtLVVO
     "cordova-plugin-advanced-http": "^3.1.0",
     "cordova-plugin-nativestorage": "^2.3.2",
     "cordova-plugin-x-toast": "^2.7.2",
     "firebase": "^8.4.2",
+<<<<<<< .merge_file_3AeY4L
 >>>>>>> .merge_file_gukJE3
+=======
+>>>>>>> .merge_file_mtLVVO
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

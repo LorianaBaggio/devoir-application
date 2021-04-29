@@ -9,6 +9,7 @@
       <ion-col size="12">
         <ion-item>
           <ion-label position="floating">Prénom</ion-label>
+<<<<<<< .merge_file_i5Qyxx
 <<<<<<< .merge_file_jbMm1N
           <ion-input type="text" [(ngModel)]="first_name"></ion-input>
         </ion-item>
@@ -33,6 +34,8 @@
           <ion-input type="password" [(ngModel)]="pass"></ion-input>
         </ion-item>
 =======
+=======
+>>>>>>> .merge_file_i575mC
           <ion-input type="text" [(ngModel)]="user.first_name"></ion-input>
       </ion-item>
       <ion-item>
@@ -59,7 +62,10 @@
           <ion-label position="floating">Confirmer le mot de passe</ion-label>
           <ion-input type="password" [(ngModel)]="user.confirm_password"></ion-input>
       </ion-item>
+<<<<<<< .merge_file_i5Qyxx
 >>>>>>> .merge_file_mROKKW
+=======
+>>>>>>> .merge_file_i575mC
       </ion-col>
       <ion-col size="12">
         <ion-button [disabled]="isErrorMail || isErrorPhone || (user.password.trim() != user.confirm_password.trim() && user.confirm_password.trim().length < 2 )" (click)="registeR()" expand="full" class="btnLogin">Register</ion-button>

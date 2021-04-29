@@ -31,9 +31,12 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+<<<<<<< .merge_file_9O7fjl
 <<<<<<< .merge_file_Ill0qC
 }
 =======
+=======
+>>>>>>> .merge_file_SnnfVp
   async registeR() {
     if(this.user.first_name && this.user.last_name && this.user.email && this.user.username ) {
       const loading = await this.loadingCtrl.create({
