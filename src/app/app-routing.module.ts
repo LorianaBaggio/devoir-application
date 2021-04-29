@@ -103,6 +103,38 @@ const routes: Routes = [
     path: 'wordpress-installation',
     loadChildren: () => import('./pages/wordpress-installation/wordpress-installation.module').then( m => m.WordpressInstallationPageModule)
   },
+  {
+    path: 'html-editeur-linux',
+    loadChildren: () => import('./pages/html-editeur-linux/html-editeur-linux.module').then( m => m.HtmlEditeurLinuxPageModule)
+  },
+  {
+    path: 'html-editeur-windows',
+    loadChildren: () => import('./pages/html-editeur-windows/html-editeur-windows.module').then( m => m.HtmlEditeurWindowsPageModule)
+  },
+  {
+    path: 'html-editeur-mac',
+    loadChildren: () => import('./pages/html-editeur-mac/html-editeur-mac.module').then( m => m.HtmlEditeurMacPageModule)
+  },
+  {
+    path: 'html-head',
+    loadChildren: () => import('./pages/html-head/html-head.module').then( m => m.HtmlHeadPageModule)
+  },
+  {
+    path: 'html-encodage',
+    loadChildren: () => import('./pages/html-encodage/html-encodage.module').then( m => m.HtmlEncodagePageModule)
+  },
+  {
+    path: 'html-body',
+    loadChildren: () => import('./pages/html-body/html-body.module').then( m => m.HtmlBodyPageModule)
+  },
+  {
+    path: 'html-liens',
+    loadChildren: () => import('./pages/html-liens/html-liens.module').then( m => m.HtmlLiensPageModule)
+  },
+  {
+    path: 'html-images',
+    loadChildren: () => import('./pages/html-images/html-images.module').then( m => m.HtmlImagesPageModule)
+  },
 ];
 
 @NgModule({
