@@ -135,6 +135,38 @@ const routes: Routes = [
     path: 'html-images',
     loadChildren: () => import('./pages/html-images/html-images.module').then( m => m.HtmlImagesPageModule)
   },
+  {
+    path: 'css-boite',
+    loadChildren: () => import('./pages/css-boite/css-boite.module').then( m => m.CssBoitePageModule)
+  },
+  {
+    path: 'css-textes',
+    loadChildren: () => import('./pages/css-textes/css-textes.module').then( m => m.CssTextesPageModule)
+  },
+  {
+    path: 'css-couleurs',
+    loadChildren: () => import('./pages/css-couleurs/css-couleurs.module').then( m => m.CssCouleursPageModule)
+  },
+  {
+    path: 'css-mesures',
+    loadChildren: () => import('./pages/css-mesures/css-mesures.module').then( m => m.CssMesuresPageModule)
+  },
+  {
+    path: 'css-positionnement',
+    loadChildren: () => import('./pages/css-positionnement/css-positionnement.module').then( m => m.CssPositionnementPageModule)
+  },
+  {
+    path: 'css-float',
+    loadChildren: () => import('./pages/css-float/css-float.module').then( m => m.CssFloatPageModule)
+  },
+  {
+    path: 'css-background',
+    loadChildren: () => import('./pages/css-background/css-background.module').then( m => m.CssBackgroundPageModule)
+  },
+  {
+    path: 'css-box-sizing',
+    loadChildren: () => import('./pages/css-box-sizing/css-box-sizing.module').then( m => m.CssBoxSizingPageModule)
+  },
 ];
 
 @NgModule({
