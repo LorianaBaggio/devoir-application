@@ -64,7 +64,7 @@ export class AuthService {
                 } else {
                     loading.dismiss();
                     console.log(data);
-                    this.router.navigate(['/profil']); 
+                    this.router.navigate(['/categories']); 
                 }
             })
             .catch(error => {
