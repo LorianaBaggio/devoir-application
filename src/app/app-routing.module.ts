@@ -203,6 +203,42 @@ const routes: Routes = [
     path: 'sass-bootstrap',
     loadChildren: () => import('./pages/sass-bootstrap/sass-bootstrap.module').then( m => m.SassBootstrapPageModule)
   },
+  {
+    path: 'angular-controllers-scope',
+    loadChildren: () => import('./pages/angular-controllers-scope/angular-controllers-scope.module').then( m => m.AngularControllersScopePageModule)
+  },
+  {
+    path: 'angular-modules',
+    loadChildren: () => import('./pages/angular-modules/angular-modules.module').then( m => m.AngularModulesPageModule)
+  },
+  {
+    path: 'angular-routes',
+    loadChildren: () => import('./pages/angular-routes/angular-routes.module').then( m => m.AngularRoutesPageModule)
+  },
+  {
+    path: 'angular-services',
+    loadChildren: () => import('./pages/angular-services/angular-services.module').then( m => m.AngularServicesPageModule)
+  },
+  {
+    path: 'angular-promesses',
+    loadChildren: () => import('./pages/angular-promesses/angular-promesses.module').then( m => m.AngularPromessesPageModule)
+  },
+  {
+    path: 'angular-filtres',
+    loadChildren: () => import('./pages/angular-filtres/angular-filtres.module').then( m => m.AngularFiltresPageModule)
+  },
+  {
+    path: 'angular-directives-deux',
+    loadChildren: () => import('./pages/angular-directives-deux/angular-directives-deux.module').then( m => m.AngularDirectivesDeuxPageModule)
+  },
+  {
+    path: 'angular-ressources',
+    loadChildren: () => import('./pages/angular-ressources/angular-ressources.module').then( m => m.AngularRessourcesPageModule)
+  },
+  {
+    path: 'angular-apply-watch-digest',
+    loadChildren: () => import('./pages/angular-apply-watch-digest/angular-apply-watch-digest.module').then( m => m.AngularApplyWatchDigestPageModule)
+  },
 ];
 
 @NgModule({
