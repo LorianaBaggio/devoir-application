@@ -9,6 +9,7 @@
       <ion-col size="12">
         <ion-item>
           <ion-label position="floating">Prénom</ion-label>
+<<<<<<< .merge_file_jbMm1N
           <ion-input type="text" [(ngModel)]="first_name"></ion-input>
         </ion-item>
         <ion-item>
@@ -31,9 +32,37 @@
           <ion-label position="floating">Confirmer le mot de passe</ion-label>
           <ion-input type="password" [(ngModel)]="pass"></ion-input>
         </ion-item>
+=======
+          <ion-input type="text" [(ngModel)]="user.first_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="text" [(ngModel)]="user.last_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pseudo</ion-label>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+  </ion-item>
+  <ion-item [ngClass]="isErrorPhone ? 'errorEmail' : 'goodEmail'">
+    <ion-label position="floating">N° de téléphone</ion-label>
+    <ion-input (keyup)="checkPhone()" type="tel" [(ngModel)]="user.phone"></ion-input>
+</ion-item>
+          <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+          <ion-item [ngClass]="user.password.trim().length < 5 ? 'errorEmail' : 'goodEmail'">
+            <ion-label position="floating">mot de passe</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <ion-item [ngClass]="user.password.trim() != user.confirm_password.trim() || user.confirm_password.trim().length < 2 ? 'errorEmail' : 'goodEmail'">
+          <ion-label position="floating">Confirmer le mot de passe</ion-label>
+          <ion-input type="password" [(ngModel)]="user.confirm_password"></ion-input>
+      </ion-item>
+>>>>>>> .merge_file_mROKKW
       </ion-col>
       <ion-col size="12">
-          <ion-button expand="full" class="btnLogin">S'inscrire</ion-button>
+        <ion-button [disabled]="isErrorMail || isErrorPhone || (user.password.trim() != user.confirm_password.trim() && user.confirm_password.trim().length < 2 )" (click)="registeR()" expand="full" class="btnLogin">Register</ion-button>
       </ion-col>
       <ion-col size="12">
           <ion-button expand="full" class="btnFb">
