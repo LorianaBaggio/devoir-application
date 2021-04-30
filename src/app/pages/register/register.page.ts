@@ -91,28 +91,6 @@ checkPhone() {
   this.isErrorPhone = (regex.test(this.user.phone.trim())) ? false : true;
 }
 
-// async register() {
-//   const load = await this.loadingCtrl.create({
-//       message: 'Patientez svp...',
-//   });
-//   await load.present();
-//   // this.user.username = this.user.email.split('@')[0];
-//   this.auth.register(this.user).then(async(data) => {
-//     console.log("success")
-//       console.log(data);
-//       await this.loadingCtrl.dismiss();
-//       this.router.navigate(['/login']);
-//   }).catch(async(err) => {
-//        console.log("Test erreur");
-//        console.log(err.error);
-//       const toast = await this.toastr.create({
-//           message: err,
-//           duration: 2000
-//       });
-//       toast.present();
-//       await this.loadingCtrl.dismiss();
-//   })
-// }
 
 
 }

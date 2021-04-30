@@ -9,7 +9,7 @@
 }
 
 .form {
-  .btnLogin {
+  .btnRegister {
     margin-top: 5%;
       --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
@@ -20,6 +20,16 @@
   .btnFb {
     --box-shadow:none;
     --background: #3B5998;
+  }
+  .errorEmail {
+    border-bottom: #ff0062;
+    --border-color: #ff0062;
+    --highlight-background: #ff0062;
+  }
+  .goodEmail {
+      border-bottom: #12eb48;
+      --border-color: #12eb48;
+      --highlight-background: #12eb48;
   }
   .forgot {
       margin-top: 0;
