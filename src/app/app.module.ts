@@ -25,6 +25,8 @@ import { AuthService } from './services/auth.service';
 // AUTH GUARD
 import { AuthGuard } from './guards/auth.guard';
 
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyDWQjLFSvk7TIdF--b57NNh5vpqttAX2jQ",
   authDomain: "edudigital-c2434.firebaseapp.com",
@@ -46,7 +48,7 @@ export const firebaseConfig = {
      AngularFireDatabaseModule,
      AngularFireAuthModule,
      AngularFireStorageModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AuthGuard, AuthService, NativeStorage],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Facebook, AuthGuard, AuthService, NativeStorage],
     bootstrap: [AppComponent],
 })
 

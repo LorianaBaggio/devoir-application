@@ -1,12 +1,19 @@
+import { HttpClient } from '@angular/common/http';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Platform, ToastController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
- import { NativeStorage } from '@ionic-native/native-storage/ngx';
-
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import * as firebase from 'firebase/app';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { AuthService } from '../../services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { FacebookLoginPlugin } from '@capacitor-community/facebook-login';
+import { Plugins, registerWebPlugin } from '@capacitor/core';
+import { FacebookLogin } from '@capacitor-community/facebook-login';
+registerWebPlugin(FacebookLogin);
 
 @Component({
   selector: 'app-login',
@@ -15,21 +22,92 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class LoginPage implements OnInit {
 
+
+  fbLogin: FacebookLoginPlugin;
+  user = null;
+  token = null;
   email: string = '';
   password: string = '';
   isErrorMail: boolean = true;
 
-  constructor( 
+  constructor(
+    private http: HttpClient,
+    private fb: Facebook, 
     private toastr: ToastController,
     private router: Router,
     private auth: AuthService,
     private platform: Platform,
     private storage: NativeStorage,
     private modal: ModalController,
-    private loading: LoadingController) { }
+    private loading: LoadingController,
+    public afDB: AngularFireDatabase,
+    public afAuth: AngularFireAuth,
+) { 
+      // this.setupFbLogin();
+    }
 
   ngOnInit() {
   }
+
+//   async setupFbLogin() {
+//     if (this.platform.is('desktop')) {
+//       this.fbLogin = FacebookLogin;
+//     } else {
+//       // Use the native implementation inside a real app!
+//       const { FacebookLogin } = Plugins;
+//       this.fbLogin = FacebookLogin;
+//     } 
+//   }
+
+//   async FBLogin() {
+//     const FACEBOOK_PERMISSIONS = ['email', 'user_birthday'];
+//     const result = await this.fbLogin.login({ permissions: FACEBOOK_PERMISSIONS });
+ 
+//     if (result.accessToken && result.accessToken.userId) {
+//       this.token = result.accessToken;
+//       this.loadUserData();
+//     } else if (result.accessToken && !result.accessToken.userId) {
+//       // Web only gets the token but not the user ID
+//       // Directly call get token to retrieve it now
+//       this.getCurrentToken();
+//     } else {
+//       // Login failed
+//     }
+//   }
+ 
+//   async getCurrentToken() {    
+//     const result = await this.fbLogin.getCurrentAccessToken();
+ 
+//     if (result.accessToken) {
+//       this.token = result.accessToken;
+//       this.loadUserData();
+//     } else {
+//       // Not logged in.
+//     }
+//   }
+ 
+//   async loadUserData() {
+//     const url = `https://graph.facebook.com/${this.token.userId}?fields=id,name,picture.width(720),birthday,email&access_token=${this.token.token}`;
+//     this.http.get(url).subscribe(res => {
+//       this.user = res;
+//     });
+//   }
+ 
+//   async logout() {
+//     await this.fbLogin.logout();
+//     this.user = null;
+//     this.token = null;
+//   }
+
+//   FacebookLogin() {
+
+//   this.fb.login(['public_profile', 'user_friends', 'email'])
+//   .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+//   .catch(e => console.log('Error logging into Facebook', e));
+
+
+// this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
+//   };
 
   login() {
     if(this.email && this.password) 
@@ -55,35 +133,5 @@ export class LoginPage implements OnInit {
     // this.isErrorMail = !regex.test(this.email);
     this.isErrorMail = (regex.test(this.email.trim())) ? false : true;
 }
-
-// async loginForm() {
-//   const load = await this.loading.create({
-//       message: 'Patientez svp...',
-//   });
-//   await load.present();
-//   this.auth.login(this.email, this.password).then(async(user: any) => {
-//       // console.log(user);
-//       console.log("test bon")
-//       console.log(this.platform.platforms());
-//       if (this.platform.is("desktop")) {
-//           localStorage.setItem('token', user.token)
-//           localStorage.setItem('user', JSON.stringify(user.user))
-//       } else {
-//           await this.storage.setItem('token', user.token)
-//           await this.storage.setItem('user', JSON.stringify(user.user))
-//       }
-//        this.router.navigate(['/register'])
-//       await this.loading.dismiss();
-     
-
-//   }).catch(async() => {
-//       this.email = ''
-//       this.password = ''
-//       this.isErrorMail = true;
-//       console.log("test erreur")
-//       await this.loading.dismiss();
-//   })
-// }
-
 
 }
