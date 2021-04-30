@@ -22,12 +22,6 @@
       <ion-col size="12">
           <ion-button [disabled]="isErrorMail || password.trim().length < 5" expand="full" class="btnLogin" (click)="login()">Se connecter</ion-button>
       </ion-col>
-      <ion-col size="12">
-          <ion-button expand="full" class="btnFb">
-            <ion-icon name="logo-facebook"></ion-icon> 
-              &nbsp;Se connecter avec Facebook
-          </ion-button>
-      </ion-col>
   </ion-row>
   <p class="registerLink">Pas encore de compte ? <a routerLink="/register">Inscris-toi !</a></p>
 </ion-content>
