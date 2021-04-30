@@ -1,4 +1,3 @@
-import { UserRegister } from './../../interfaces/user-register';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -23,10 +22,6 @@ isErrorMail: boolean = true;
     private afauth: AngularFireAuth,
     private LoadingCtrl: LoadingController,
     private toastr: ToastController) { }
-  
-  user: UserRegister = {first_name: '', last_name: '', email: '', password: '', username: '', confirm_password: '', phone: '' };
-
-  
 
   ngOnInit() {
   }
