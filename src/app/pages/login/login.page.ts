@@ -56,34 +56,4 @@ export class LoginPage implements OnInit {
     this.isErrorMail = (regex.test(this.email.trim())) ? false : true;
 }
 
-// async loginForm() {
-//   const load = await this.loading.create({
-//       message: 'Patientez svp...',
-//   });
-//   await load.present();
-//   this.auth.login(this.email, this.password).then(async(user: any) => {
-//       // console.log(user);
-//       console.log("test bon")
-//       console.log(this.platform.platforms());
-//       if (this.platform.is("desktop")) {
-//           localStorage.setItem('token', user.token)
-//           localStorage.setItem('user', JSON.stringify(user.user))
-//       } else {
-//           await this.storage.setItem('token', user.token)
-//           await this.storage.setItem('user', JSON.stringify(user.user))
-//       }
-//        this.router.navigate(['/register'])
-//       await this.loading.dismiss();
-     
-
-//   }).catch(async() => {
-//       this.email = ''
-//       this.password = ''
-//       this.isErrorMail = true;
-//       console.log("test erreur")
-//       await this.loading.dismiss();
-//   })
-// }
-
-
 }

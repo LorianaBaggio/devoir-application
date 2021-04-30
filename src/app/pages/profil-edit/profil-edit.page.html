@@ -11,39 +11,29 @@
 
       <ion-item>
         <ion-label position="floating">Pseudo</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="username" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Nom</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="last_name" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Prénom</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="first_name" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">N° de téléphone</ion-label>
-        <ion-input type="tel"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-
-      <ion-item class="lastField">
-        <ion-label position="floating">Mot de passe</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)]="phone" type="tel"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <ion-button expand="full" class="btnEnregistrer">Enregistrer</ion-button>
+      <ion-button expand="full" class="btnEnregistrer" (click)="updateProfil()">Enregistrer</ion-button>
     </ion-col>
   </ion-row>
 

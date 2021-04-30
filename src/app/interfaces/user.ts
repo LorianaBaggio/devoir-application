@@ -1,4 +1,5 @@
 export interface User {
+    userId ?: string;
     username ? : string;
     first_name: string;
     last_name: string;
@@ -6,6 +7,6 @@ export interface User {
     password: string;
     avatar ? : string;
     createdAt: number;
-    phone: number;
+    phone: string;
 }
 
