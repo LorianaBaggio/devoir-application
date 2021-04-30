@@ -9,17 +9,13 @@
 }
 
 .form {
-  .btnRegister {
+  .btnLogin {
     margin-top: 5%;
       --background: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-hover: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-focused: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --background-activated: linear-gradient(to right, #00b0ff, #009eff, #0089ff, #0073ff, #0057ff);
       --box-shadow:none;
-  }
-  .btnFb {
-    --box-shadow:none;
-    --background: #3B5998;
   }
   .errorEmail {
     border-bottom: #ff0062;
