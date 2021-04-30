@@ -104,35 +104,10 @@ export class AuthService {
         toast.present();
       } // fin du toast 
 
-//  async login(email: string, password: string) {
-//       return new Promise((resolve, rejects) => {
-//           this.http.post(this.url + '/users/login', { email: email, password: password }).subscribe((data: any) => {
-//               console.log(data);
-                
-//                   localStorage.setItem('token', data.token);
-                  
-//               (!data.success) ? rejects(data): resolve(data);
-              
-//           });
-//       });
-//   }
-
-//   register(user: UserRegister) {
-//       return new Promise((resolve, rejects) => {
-//           this.http.post(this.url + '/users/register', user).subscribe((data: any) => {
-//             console.log(data);
-//               (!data.success) ? rejects(data): resolve(data);
-              
-//           });
-//       });
-//   }
-
   getAuth() { 
     return this.afauth.user; 
   } 
 
 }
-// function switchMap(arg0: (user: any) => Observable<any>): import("rxjs").OperatorFunction<firebase.default.User, User> {
-//     throw new Error('Function not implemented.');
-// }
+
 

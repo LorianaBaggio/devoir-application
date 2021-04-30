@@ -17,6 +17,7 @@ export class ProfilEditPage implements OnInit {
   username: string;
   phone: string;
   email: string;
+  
 
   constructor(
     private auth: AuthService,
@@ -34,7 +35,6 @@ export class ProfilEditPage implements OnInit {
       this.username = user.username;
       this.phone = user.phone;
       this.email = user.email;
-
     })
   }
   
@@ -51,11 +51,12 @@ export class ProfilEditPage implements OnInit {
     });
     loading.present();
     this.afs.collection('user').doc(this.userId).set({
-      'email': this.email,
+      
+      'username': this.username,
       'last_name': this.last_name,
       'first_name': this.first_name,
+      'email': this.email,
       'phone': this.phone,
-      'username': this.username,
       'editAt': Date.now()
     }).then(() => {
       

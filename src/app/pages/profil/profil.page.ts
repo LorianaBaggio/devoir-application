@@ -20,4 +20,7 @@ export class ProfilPage implements OnInit {
     })
   }
 
+  logout() {
+    this.auth.signOut();
+  }
 }
